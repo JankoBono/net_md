@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.IO;
 using System.Xml.Serialization;
 
 namespace MD1.classes
@@ -73,17 +72,18 @@ namespace MD1.classes
         }
 
         // Implementācija metodei Save() - saglabā datus failā XML formātā
-        public void Save(string filePath)
+        public bool Save(string filePath)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(DataManager));
             using (TextWriter writer = new StreamWriter(filePath))
             {
                 serializer.Serialize(writer, this);
             }
+            return true;
         }
 
         // Implementācija metodei Load() - ielādē datus no XML faila
-        public void Load(string filePath)
+        public bool Load(string filePath)
         {
             if (File.Exists(filePath))
             {
@@ -103,10 +103,11 @@ namespace MD1.classes
             {
                 throw new FileNotFoundException("File not found.");
             }
+            return true;
         }
 
         // Implementācija metodei CreateTestData() - radīt testa datus priekš visām klasēm
-        public void CreateTestData()
+        public bool CreateTestData()
         {
             // Testa dati priekš skolotājiem
             var teacher1 = new Teacher("Jānis", "Kalniņš", Gender.Man, DateTime.Now);
@@ -141,10 +142,11 @@ namespace MD1.classes
             // Testa dati priekš atsauksmēm
             Reviews.Add(new ReviewForm { Student = student1, Course = course1, Score = 88, Description = "Viss bija saprotams" });
             Reviews.Add(new ReviewForm { Student = student2, Course = course2, Score = 92, Description = "Garlaicīgi stāstija" });
+            return true;
         }
 
         // Implementācija metodei Reset() - notīra visus datus
-        public void Reset()
+        public bool Reset()
         {
             Teachers.Clear();
             Students.Clear();
@@ -152,6 +154,7 @@ namespace MD1.classes
             Assignments.Clear();
             Submissions.Clear();
             Reviews.Clear();
+            return true;
         }
     }
 }

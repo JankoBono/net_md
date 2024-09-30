@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace MD1
 {
@@ -10,15 +13,15 @@ namespace MD1
         string Print();
 
         // Saglabā visu kolekciju datus failā
-        void Save(string filePath);
+        bool Save(string filePath);
 
         // Nolasīt visu kolekciju datus no faila
-        void Load(string filePath);
+        bool Load(string filePath);
 
         // Radīt testa datus kolekcijās
-        void CreateTestData();
+        bool CreateTestData();
 
         // Izdzēst visus datus kolekcijās
-        void Reset();
+        bool Reset();
     }
 }
