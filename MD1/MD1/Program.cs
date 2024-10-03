@@ -6,13 +6,13 @@ using System.Xml.Linq;
 
 Console.WriteLine("gm");
 
-string path = "..\\..\\"; 
+string filePath  = @"..\..\figures.xml";
 var dm = new DataManager(); 
 dm.CreateTestData();
 Console.WriteLine(dm.Print());
-dm.Save(path);
+dm.Save(filePath);
 dm.Reset();
 Console.WriteLine(dm.Print());
-dm.Load(path);
+dm.Load(filePath);
 Console.WriteLine(dm.Print());
 Console.ReadLine();

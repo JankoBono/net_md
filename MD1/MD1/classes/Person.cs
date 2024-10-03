@@ -68,6 +68,10 @@ namespace MD1.classes
             _gender = gender;
         }
 
+        public Person()
+        {
+        }
+
 
         // Pārdefinēta ToString() metode
         public override string ToString()
@@ -80,7 +84,7 @@ namespace MD1.classes
         public DateTime ContractDate { get; set; }
 
         // Parameterless constructor required for XML serialization
-        public Teacher()
+        public Teacher() : base("DefaultName", "DefaultSurname", Gender.Man)
         {
         }
 
@@ -108,6 +112,10 @@ namespace MD1.classes
             : base(name, surname, gender) // Izsauc bāzes klases Person konstruktoru
         {
             StudentIdNumber = StudentIdNumber;
+        }
+
+        public Student() : base("DefaultName", "DefaultSurname", Gender.Man)
+        {
         }
 
         // Pārdefinētā metode ToString()
