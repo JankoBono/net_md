@@ -15,7 +15,7 @@ namespace MD1.classes
         Man,
         Woman
     }
-
+    // Komandas, kas iekļauj apakšklases virsklases serializācijā
     [XmlInclude(typeof(Teacher))]
     [XmlInclude(typeof(Student))]
 
@@ -68,6 +68,9 @@ namespace MD1.classes
             _gender = gender;
         }
 
+        // Bez parametru konstruktors vajadzīgs priekš serializācijas,
+        // jo tāds bija nepieciešams apakšklasei, tātad jāiekļauj arī pārējām saistītām klasēm
+
         public Person()
         {
         }
@@ -82,9 +85,9 @@ namespace MD1.classes
     public class Teacher : Person
     {
         public DateTime ContractDate { get; set; }
-
-        // Parameterless constructor required for XML serialization
-        public Teacher() : base("DefaultName", "DefaultSurname", Gender.Man)
+        
+        // Bez parametru konstruktors
+        public Teacher() : base("Vards", "Uzvards", Gender.Man)
         {
         }
 
@@ -99,22 +102,23 @@ namespace MD1.classes
 
         public override string ToString()
         {
-            return $"{base.ToString()}, Kontaktēšanās datums: {ContractDate.ToShortDateString()}";
+            return $"{base.ToString()}, Līguma datums: {ContractDate.ToShortDateString()}";
         }
     }
 
     public class Student : Person
     {
-        public int StudentIdNumber { get; set; }
+        public string StudentIdNumber { get; set; }
 
         // Pirmais konstruktors - saņem visus parametrus
         public Student(string name, string surname, Gender gender, string studentIdNumber)
             : base(name, surname, gender) // Izsauc bāzes klases Person konstruktoru
         {
-            StudentIdNumber = StudentIdNumber;
+            StudentIdNumber = studentIdNumber;
         }
 
-        public Student() : base("DefaultName", "DefaultSurname", Gender.Man)
+        // Otrais konstruktors - bez parametriem
+        public Student() : base("Vards", "Uzvards", Gender.Man)
         {
         }
 

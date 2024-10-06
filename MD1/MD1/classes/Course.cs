@@ -14,7 +14,7 @@ namespace MD1.classes
         public override string ToString()
         {
             // Izsauc bāzes klases ToString() un klases Course pievieno īpašības
-            return $"{base.ToString()}, Kurss: {Name}, Pasniedzējs: {Teacher}";
+            return $"Kurss: {Name}, Pasniedzējs: {Teacher}";
         }
     }
 }

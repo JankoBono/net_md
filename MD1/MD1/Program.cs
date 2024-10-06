@@ -4,7 +4,6 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 using System.Xml.Linq;
 
-Console.WriteLine("gm");
 
 string filePath  = @"..\..\figures.xml";
 var dm = new DataManager(); 

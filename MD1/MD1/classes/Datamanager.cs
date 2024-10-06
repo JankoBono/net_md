@@ -106,7 +106,7 @@ namespace MD1.classes
             return true;
         }
 
-        // Implementācija metodei CreateTestData() - radīt testa datus priekš visām klasēm
+        // Implementācija metodei CreateTestData() - izveido testa datus priekš visām klasēm
         public bool CreateTestData()
         {
             // Testa dati priekš skolotājiem
@@ -116,8 +116,8 @@ namespace MD1.classes
             Teachers.Add(teacher2);
 
             // Testa dati priekš studentiem
-            var student1 = new Student("Fabiāns", "Duks", Gender.Man, "S12345");
-            var student2 = new Student("Estere", "Pakalna", Gender.Woman, "S67890");
+            var student1 = new Student("Fabiāns", "Duks", Gender.Man, "FB1234");
+            var student2 = new Student("Estere", "Pakalna", Gender.Woman, "EP5678");
             Students.Add(student1);
             Students.Add(student2);
 
@@ -128,6 +128,7 @@ namespace MD1.classes
             Courses.Add(course2);
 
             // Testa dati priekš uzdevumiem
+            // AddDays() reference paņemta no https://www.geeksforgeeks.org/datetime-adddays-method-in-c-sharp/
             var assignment1 = new Assignement { Deadline = DateTime.Now.AddDays(7), Course = course1, Description = "Iesniegt MD1" };
             var assignment2 = new Assignement { Deadline = DateTime.Now.AddDays(10), Course = course2, Description = "Prezentēt" };
             Assignments.Add(assignment1);
@@ -140,8 +141,10 @@ namespace MD1.classes
             Submissions.Add(submission2);
 
             // Testa dati priekš atsauksmēm
-            Reviews.Add(new ReviewForm { Student = student1, Course = course1, Score = 88, Description = "Viss bija saprotams" });
-            Reviews.Add(new ReviewForm { Student = student2, Course = course2, Score = 92, Description = "Garlaicīgi stāstija" });
+            var review1 = new ReviewForm { Student = student1, Course = course1, Score = 88, Description = "Viss bija saprotams" };
+            var review2 = new ReviewForm { Student = student2, Course = course2, Score = 92, Description = "Garlaicīgi stāstija" };
+            Reviews.Add(review1);
+            Reviews.Add(review2);
             return true;
         }
 

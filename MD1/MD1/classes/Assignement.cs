@@ -15,7 +15,7 @@ namespace MD1.classes
         public override string ToString()
         {
             // Izsauc bāzes klases ToString() un pievieno klases Assignement īpašības
-            return $"{base.ToString()}, Beigu datums: {Deadline}, Kurss: {Course}, Apraksts: {Description}";
+            return $"Beigu datums: {Deadline}, Kurss: {Course}, Apraksts: {Description}";
         }
     }
 }

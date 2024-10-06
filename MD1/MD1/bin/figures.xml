@@ -5,13 +5,13 @@
       <Name>Jānis</Name>
       <Surname>Kalniņš</Surname>
       <Gender>Man</Gender>
-      <ContractDate>2024-10-03T20:17:36.6456938+03:00</ContractDate>
+      <ContractDate>2024-10-06T23:43:13.3013151+03:00</ContractDate>
     </Teacher>
     <Teacher>
       <Name>Paula</Name>
       <Surname>Taure</Surname>
       <Gender>Woman</Gender>
-      <ContractDate>2024-10-03T20:17:36.6544502+03:00</ContractDate>
+      <ContractDate>2024-10-06T23:43:13.3143665+03:00</ContractDate>
     </Teacher>
   </Teachers>
   <Students>
@@ -19,13 +19,13 @@
       <Name>Fabiāns</Name>
       <Surname>Duks</Surname>
       <Gender>Man</Gender>
-      <StudentIdNumber>0</StudentIdNumber>
+      <StudentIdNumber>FB1234</StudentIdNumber>
     </Student>
     <Student>
       <Name>Estere</Name>
       <Surname>Pakalna</Surname>
       <Gender>Woman</Gender>
-      <StudentIdNumber>0</StudentIdNumber>
+      <StudentIdNumber>EP5678</StudentIdNumber>
     </Student>
   </Students>
   <Courses>
@@ -35,7 +35,7 @@
         <Name>Jānis</Name>
         <Surname>Kalniņš</Surname>
         <Gender>Man</Gender>
-        <ContractDate>2024-10-03T20:17:36.6456938+03:00</ContractDate>
+        <ContractDate>2024-10-06T23:43:13.3013151+03:00</ContractDate>
       </Teacher>
     </Course>
     <Course>
@@ -44,33 +44,33 @@
         <Name>Paula</Name>
         <Surname>Taure</Surname>
         <Gender>Woman</Gender>
-        <ContractDate>2024-10-03T20:17:36.6544502+03:00</ContractDate>
+        <ContractDate>2024-10-06T23:43:13.3143665+03:00</ContractDate>
       </Teacher>
     </Course>
   </Courses>
   <Assignments>
     <Assignement>
-      <Deadline>2024-10-10T20:17:36.654951+03:00</Deadline>
+      <Deadline>2024-10-13T23:43:13.3149239+03:00</Deadline>
       <Course>
         <Name>Matemātika</Name>
         <Teacher>
           <Name>Jānis</Name>
           <Surname>Kalniņš</Surname>
           <Gender>Man</Gender>
-          <ContractDate>2024-10-03T20:17:36.6456938+03:00</ContractDate>
+          <ContractDate>2024-10-06T23:43:13.3013151+03:00</ContractDate>
         </Teacher>
       </Course>
       <Description>Iesniegt MD1</Description>
     </Assignement>
     <Assignement>
-      <Deadline>2024-10-13T20:17:36.6550893+03:00</Deadline>
+      <Deadline>2024-10-16T23:43:13.3150738+03:00</Deadline>
       <Course>
         <Name>Bioloģija</Name>
         <Teacher>
           <Name>Paula</Name>
           <Surname>Taure</Surname>
           <Gender>Woman</Gender>
-          <ContractDate>2024-10-03T20:17:36.6544502+03:00</ContractDate>
+          <ContractDate>2024-10-06T23:43:13.3143665+03:00</ContractDate>
         </Teacher>
       </Course>
       <Description>Prezentēt</Description>
@@ -79,14 +79,14 @@
   <Submissions>
     <Submission>
       <Assignement>
-        <Deadline>2024-10-10T20:17:36.654951+03:00</Deadline>
+        <Deadline>2024-10-13T23:43:13.3149239+03:00</Deadline>
         <Course>
           <Name>Matemātika</Name>
           <Teacher>
             <Name>Jānis</Name>
             <Surname>Kalniņš</Surname>
             <Gender>Man</Gender>
-            <ContractDate>2024-10-03T20:17:36.6456938+03:00</ContractDate>
+            <ContractDate>2024-10-06T23:43:13.3013151+03:00</ContractDate>
           </Teacher>
         </Course>
         <Description>Iesniegt MD1</Description>
@@ -95,21 +95,21 @@
         <Name>Fabiāns</Name>
         <Surname>Duks</Surname>
         <Gender>Man</Gender>
-        <StudentIdNumber>0</StudentIdNumber>
+        <StudentIdNumber>FB1234</StudentIdNumber>
       </Student>
-      <SubmissionTime>2024-10-03T20:17:36.6552375+03:00</SubmissionTime>
+      <SubmissionTime>2024-10-06T23:43:13.3155211+03:00</SubmissionTime>
       <Score>95</Score>
     </Submission>
     <Submission>
       <Assignement>
-        <Deadline>2024-10-13T20:17:36.6550893+03:00</Deadline>
+        <Deadline>2024-10-16T23:43:13.3150738+03:00</Deadline>
         <Course>
           <Name>Bioloģija</Name>
           <Teacher>
             <Name>Paula</Name>
             <Surname>Taure</Surname>
             <Gender>Woman</Gender>
-            <ContractDate>2024-10-03T20:17:36.6544502+03:00</ContractDate>
+            <ContractDate>2024-10-06T23:43:13.3143665+03:00</ContractDate>
           </Teacher>
         </Course>
         <Description>Prezentēt</Description>
@@ -118,9 +118,9 @@
         <Name>Estere</Name>
         <Surname>Pakalna</Surname>
         <Gender>Woman</Gender>
-        <StudentIdNumber>0</StudentIdNumber>
+        <StudentIdNumber>EP5678</StudentIdNumber>
       </Student>
-      <SubmissionTime>2024-10-03T20:17:36.6553362+03:00</SubmissionTime>
+      <SubmissionTime>2024-10-06T23:43:13.3156024+03:00</SubmissionTime>
       <Score>90</Score>
     </Submission>
   </Submissions>
@@ -130,7 +130,7 @@
         <Name>Fabiāns</Name>
         <Surname>Duks</Surname>
         <Gender>Man</Gender>
-        <StudentIdNumber>0</StudentIdNumber>
+        <StudentIdNumber>FB1234</StudentIdNumber>
       </Student>
       <Course>
         <Name>Matemātika</Name>
@@ -138,7 +138,7 @@
           <Name>Jānis</Name>
           <Surname>Kalniņš</Surname>
           <Gender>Man</Gender>
-          <ContractDate>2024-10-03T20:17:36.6456938+03:00</ContractDate>
+          <ContractDate>2024-10-06T23:43:13.3013151+03:00</ContractDate>
         </Teacher>
       </Course>
       <Score>88</Score>
@@ -149,7 +149,7 @@
         <Name>Estere</Name>
         <Surname>Pakalna</Surname>
         <Gender>Woman</Gender>
-        <StudentIdNumber>0</StudentIdNumber>
+        <StudentIdNumber>EP5678</StudentIdNumber>
       </Student>
       <Course>
         <Name>Bioloģija</Name>
@@ -157,7 +157,7 @@
           <Name>Paula</Name>
           <Surname>Taure</Surname>
           <Gender>Woman</Gender>
-          <ContractDate>2024-10-03T20:17:36.6544502+03:00</ContractDate>
+          <ContractDate>2024-10-06T23:43:13.3143665+03:00</ContractDate>
         </Teacher>
       </Course>
       <Score>92</Score>
