@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MD2.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"/>
+        <Entry x:Name="Ievade1" Placeholder="Ievadi studenta vārdu"/>
+        <Entry x:Name="Ievade2" Placeholder="Ievadi studenta uzvārdu"/>
+        <Picker x:Name="Dzimums"
+                Title="Izvēlies dzimumu">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Man</x:String>
+                    <x:String>Woman</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Entry x:Name="Ievade3" Placeholder="Ievadi studenta id"/>
+        <Button x:Name="Poga" Clicked="Pogaclick" Text="Nosūtīt studentu"/>
+        <Label x:Name="Rezult"/>
+
+    </VerticalStackLayout>
+</ContentPage>

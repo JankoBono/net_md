@@ -9,6 +9,7 @@ namespace MD1
 {
     public class Submission
     {
+        public int Id { get; set; }
         public Assignement Assignement { get; set; }
         public Student Student { get; set; }
         public DateTime SubmissionTime { get; set; }

@@ -21,9 +21,7 @@ namespace MD1
 
     public abstract class Person
     {
-
         public int Id { get; set; }
-
         // Privātie atribūti
         private string _name;
         private string _surname;

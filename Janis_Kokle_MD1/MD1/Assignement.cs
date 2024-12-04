@@ -8,6 +8,7 @@ namespace MD1
 {
     public class Assignement
     {
+        public int Id { get; set; }
         public DateTime Deadline { get; set; }
         public Course Course { get; set; }
         public string Description { get; set; }

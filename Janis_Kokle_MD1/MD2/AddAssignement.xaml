@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MD2.AddAssignement"
+             Title="Assignement pievienošana">
+    <VerticalStackLayout>
+
+        <Label Text="Izvēlies kursu:" FontSize="Medium" />
+        <Label Text="Lai izvēlētos kursu, no sākuma jāizveido kursa vertības (ģenerēt testa datus)" FontSize="Small" />
+
+        
+        <!-- Picker priekš kursiem -->
+        
+        <Picker x:Name="CoursePicker"
+                Title="Izvēlies kursu"
+                />
+        
+        <DatePicker MinimumDate="01/01/2024" 
+                    MaximumDate="12/31/2026" 
+                    Date="11/21/2024" 
+                    x:Name="datePicker"/>
+        
+        <Entry x:Name="Ievade4"/>
+        <Button x:Name="AddPoga" Clicked="Pogaclick" Text="Pievienot uzdevumu"/>
+        <Button x:Name="EditPoga" Clicked="PogaclickEdit" IsVisible="False" Text="Rediģēt uzdevumu"/>
+        <Label x:Name="RezultUzd"/>
+
+    </VerticalStackLayout>
+</ContentPage>
