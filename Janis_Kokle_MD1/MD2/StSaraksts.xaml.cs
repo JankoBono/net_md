@@ -1,4 +1,6 @@
 using MD1;
+using Microsoft.Maui.ApplicationModel.DataTransfer;
+using Microsoft.Maui.Controls.Shapes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -8,27 +10,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
+
 namespace MD2;
 
-public partial class SubSaraksts : ContentPage
+public partial class StSaraksts : ContentPage
 {
-	public DbDataManeger dm;
+    public DbDataManeger dm;
 
-    public SubSaraksts()
-	{
+    public StSaraksts()
+    {
         dm = App.dm;
         BindingContext = this;
         InitializeComponent();
-	}
+    }
 
-    public List<Submission> SubList
+    public List<Student> StList
     {
         get
         {
             Debug.WriteLine("GetList");
-            return dm.submissions;
+            return dm.studenti;
         }
-        set { dm.submissions = value; }
+        set { dm.studenti = value; }
     }
 
     private async void EditClicked(object sender, EventArgs e)
@@ -36,11 +39,11 @@ public partial class SubSaraksts : ContentPage
         var b = sender as Button;
         if (b != null)
         {
-            if (b.BindingContext is Submission)
+            if (b.BindingContext is Student)
             {
-                var ies = (Submission)b.BindingContext;
-                var iesPage = new AddSubmission(ies);
-                await Navigation.PushAsync(iesPage);
+                //var ies = (Student)b.BindingContext;
+                //var iesPage = new AddPerson(ies);
+                //await Navigation.PushAsync(iesPage);
             }
         }
     }
@@ -50,12 +53,12 @@ public partial class SubSaraksts : ContentPage
         var b = sender as Button;
         if (b != null)
         {
-            var f = b.BindingContext as Submission;
+            var f = b.BindingContext as Student;
             if (f != null)
             {
                 try
                 {
-                    dm.context.Submissions.Remove(f);
+                    dm.context.Studenti.Remove(f);
                     if (dm.Save())
                     {
                         BindingContext = null;
@@ -63,7 +66,7 @@ public partial class SubSaraksts : ContentPage
                     }
                     else
                     {
-                        DisplayAlert("Kïûda", "Neizdevâs dzçst iesniegumu no datubâzes.", "Labi");
+                        DisplayAlert("Kïûda", "Neizdevâs dzçst studentu no datubâzes.", "Labi");
                     }
                 }
                 catch (Exception ex)

@@ -6,7 +6,7 @@ namespace MD2;
 public partial class AddAssignement : ContentPage
 {
     private IAddAssignement _dm;
-    public DataManager dm1;
+    public DbDataManeger dm1;
 
     public AddAssignement()
 	{

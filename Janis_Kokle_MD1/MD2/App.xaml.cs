@@ -9,8 +9,8 @@ namespace MD2
             InitializeComponent();
 
             MainPage = new AppShell();
-            dm = new DataManager();
+            dm = new DbDataManeger();
         }
-        public static DataManager dm { get; set; }
+        public static DbDataManeger dm { get; set; }
     }
 }

@@ -5,7 +5,7 @@ namespace MD2;
 public partial class AddSubmission : ContentPage
 {
     private IAddSubmission _dm;
-    public DataManager dm1;
+    public DbDataManeger dm1;
     public AddSubmission()
 	{
 		InitializeComponent();

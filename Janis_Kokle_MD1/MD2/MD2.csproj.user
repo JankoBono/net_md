@@ -18,6 +18,9 @@
     <MauiXaml Update="NewPage1.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="StSaraksts.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="SubSaraksts.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

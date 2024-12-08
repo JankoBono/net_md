@@ -12,7 +12,7 @@ namespace MD2;
 
 public partial class UzdSaraksts : ContentPage
 {
-    public DataManager dm;
+    public DbDataManeger dm;
     public UzdSaraksts()
 	{
         dm = App.dm;
@@ -24,9 +24,9 @@ public partial class UzdSaraksts : ContentPage
         get
         {
             Debug.WriteLine("GetList");
-            return dm.Assignments;
+            return dm.assignements;
         }
-        set { dm.Assignments = value; }
+        set { dm.assignements = value; }
     }
 
     private async void EditClicked(object sender, EventArgs e)
@@ -48,12 +48,26 @@ public partial class UzdSaraksts : ContentPage
         var b = sender as Button;
         if (b != null)
         {
-            var f = b.BindingContext as Assignement;
-            if (null != f)
+            var p = b.BindingContext as Assignement;
+            if (p != null)
             {
-                dm.Assignments.Remove(f);
-                BindingContext = null;
-                BindingContext = this;
+                try
+                {
+                    dm.context.Assignements.Remove(p);
+                    if (dm.Save())
+                    {
+                        BindingContext = null;
+                        BindingContext = this;
+                    }
+                    else
+                    {
+                        DisplayAlert("Kïûda", "Neizdevâs dzçst iesniegumu no datubâzes.", "Labi");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    DisplayAlert("Kïûda", $"Dzçðanas laikâ radâs kïûda: {ex.Message}", "Labi");
+                }
             }
         }
     }

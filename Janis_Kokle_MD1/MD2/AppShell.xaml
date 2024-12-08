@@ -15,6 +15,10 @@
         Title="Studenta lapa"
         ContentTemplate="{DataTemplate local:NewPage1}"
         Route="NewPage1" />
+    <ShellContent
+        Title="Studentu saraksts"
+        ContentTemplate="{DataTemplate local:StSaraksts}"
+        Route="StSaraksts" />
     <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
