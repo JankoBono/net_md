@@ -1,0 +1,1 @@
+Lai izpildītu MD3 risinājumu ir nepieciešams palaist MD2 kodu, kas palaiž .net maui lietotni!

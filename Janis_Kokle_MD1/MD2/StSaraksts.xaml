@@ -4,7 +4,7 @@
              x:Class="MD2.StSaraksts"
              Title="StSaraksts" NavigatedTo="ContentPage_NavigatedTo">
     <VerticalStackLayout>
-        <CollectionView ItemsSource="{Binding StSaraksts}" 
+        <CollectionView ItemsSource="{Binding StList}" 
                          VerticalOptions="FillAndExpand">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

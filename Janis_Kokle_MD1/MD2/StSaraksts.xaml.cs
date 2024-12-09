@@ -41,9 +41,9 @@ public partial class StSaraksts : ContentPage
         {
             if (b.BindingContext is Student)
             {
-                //var ies = (Student)b.BindingContext;
-                //var iesPage = new AddPerson(ies);
-                //await Navigation.PushAsync(iesPage);
+                var st = (Student)b.BindingContext;
+                var stPage = new NewPage1(st);
+                await Navigation.PushAsync(stPage);
             }
         }
     }

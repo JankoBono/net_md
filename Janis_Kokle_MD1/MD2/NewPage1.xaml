@@ -19,6 +19,7 @@
         </Picker>
         <Entry x:Name="Ievade3" Placeholder="Ievadi studenta id"/>
         <Button x:Name="Poga" Clicked="Pogaclick" Text="Nosūtīt studentu"/>
+        <Button x:Name="EditPoga" Clicked="PogaclickEdit" IsVisible="False" Text="Rediģēt studentu"/>
         <Label x:Name="Rezult"/>
 
     </VerticalStackLayout>
